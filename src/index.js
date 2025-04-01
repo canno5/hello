@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");;
 const fs = require("fs");
 require('dotenv').config({path: ".env"});
-let port = process.env.PROD || 2000;
+let port = process.env.PORT || 2000;
 let staticPath = path.join(__dirname, '../static');
 let viewPath = path.join(__dirname, '../views');
 app.use('/static', express.static(staticPath));
